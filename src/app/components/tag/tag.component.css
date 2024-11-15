@@ -60,7 +60,7 @@
   cursor: not-allowed;
 }
 
-/* Botones */
+
 button {
   cursor: pointer;
   padding: 8px 15px;
@@ -97,7 +97,7 @@ button {
   background-color: #005f6b;
 }
 
-/* Contenedor del formulario */
+
 .form-container {
   background-color: white;
   padding: 20px;

@@ -16,7 +16,6 @@ export class TaskComponent implements OnInit {
   message: string | null = null;
   showForm: boolean = false;
 
-  // Paginación
   currentPage: number = 1;
   itemsPerPage: number = 10;
   totalPages: number = 1;
@@ -44,7 +43,7 @@ export class TaskComponent implements OnInit {
     });
   }
 
-  // Paginación
+
   updatePagination(): void {
     this.totalPages = Math.ceil(this.tasks.length / this.itemsPerPage);
     this.updatePaginatedTasks();

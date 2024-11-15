@@ -3,8 +3,8 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem;
   padding: 2rem;
-  justify-content: center; /* Centra las columnas horizontalmente */
-  align-items: center; /* Centra las filas verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 .card {

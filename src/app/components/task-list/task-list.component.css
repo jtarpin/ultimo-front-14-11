@@ -1,4 +1,4 @@
-/* Container */
+
 .task-list-container {
   background-color: #f0f0f0;
   padding: 20px;
@@ -8,7 +8,7 @@
   justify-content: flex-start;
 }
 
-/* Title and table styles */
+
 .title, .section-title {
   font-size: 1.5rem;
   color: #444;
@@ -38,7 +38,7 @@
   background-color: #f9f9f9;
 }
 
-/* Buttons */
+
 button {
   cursor: pointer;
   padding: 8px 15px;
@@ -57,7 +57,7 @@ button {
   color: white;
 }
 
-/* Create Button */
+
 .create-button-container {
   text-align: center;
   margin-top: 20px;
@@ -76,7 +76,7 @@ button {
   background-color: #005f6b;
 }
 
-/* Message */
+
 .message {
   background-color: #ffcc00;
   color: #333;
@@ -86,7 +86,7 @@ button {
   border-radius: 5px;
 }
 
-/* Form Container */
+
 .form-container {
   background-color: white;
   padding: 20px;
@@ -148,7 +148,7 @@ button {
   background-color: #d32f2f;
 }
 
-/* Pagination */
+
 .pagination {
   display: flex;
   align-items: center;

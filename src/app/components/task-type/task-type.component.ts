@@ -16,7 +16,7 @@ export class TaskTypeComponent implements OnInit {
   message: string | null = null;
   showForm: boolean = false;
 
-  // Paginación
+
   currentPage: number = 1;
   itemsPerPage: number = 10;
   totalPages: number = 1;

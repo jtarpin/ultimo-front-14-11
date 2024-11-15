@@ -14,9 +14,9 @@ export class TagComponent implements OnInit {
   tagForm: FormGroup;
   selectedTag: Tag | null = null;
   message: string | null = null;
-  showForm: boolean = false; // Agregado para controlar la visibilidad del formulario
+  showForm: boolean = false;
 
-  // Paginación
+
   currentPage: number = 1;
   itemsPerPage: number = 10;
   totalPages: number = 1;
@@ -50,7 +50,7 @@ export class TagComponent implements OnInit {
     });
   }
 
-  // Paginación
+
   updatePagination(): void {
     this.totalPages = Math.ceil(this.tags.length / this.itemsPerPage);
     this.updatePaginatedTags();

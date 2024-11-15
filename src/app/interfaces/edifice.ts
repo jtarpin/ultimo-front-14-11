@@ -4,10 +4,10 @@ export interface Edifice {
     num_tag: string;
     street: string;
     number: number;
-    location: string;   // Nombre de la ubicación
-    province: string;   // Nombre de la provincia
-    available: string;  // Estado de disponibilidad
-    id_location: number; // ID de la ubicación
-    id_province: number; // ID de la provincia
-    id_available: number; // ID de disponibilidad
+    location: string;
+    province: string;
+    available: string;
+    id_location: number;
+    id_province: number;
+    id_available: number;
 }

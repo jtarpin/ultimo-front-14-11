@@ -19,23 +19,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;     /* Fondo del contenedor */
+    background-color: #f5f5f5;
 }
 
 .login-content {
-    background-color: #333333; /* Fondo del formulario */
+    background-color: #333333;
     padding: 2rem;
     border-radius: 0.5rem;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);                  /* Ancho fijo del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-content h3 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;           /* Centrar el texto del título */
+    font-size: 1.5rem;
 }
 
 .login-field{
@@ -45,7 +45,7 @@
 .login-field label {
     color: #ffffff;
     display: block;
-    margin-bottom: 0.5rem;             /* Espacio arriba y abajo */
+    margin-bottom: 0.5rem;
 }
 
 .inputStyle {
@@ -77,7 +77,7 @@
 
 .message {
     margin-bottom: 1rem;
-    color: #ff0000; /* Color rojo para mensajes de error */
+    color: #ff0000;
     text-align: center;
 }
 

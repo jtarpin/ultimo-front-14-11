@@ -66,7 +66,7 @@ export class CrearOrdenComponent implements OnInit {
   selectedFloorName?: string;
   selectedSector?: string;
   selectedSite?: string;
-  selectedTaskListSteps: string[] = []; // Lista de descripciones de tareas
+  selectedTaskListSteps: string[] = [];
   selectedPriority?: string;
   isEditing: boolean = false;
   selectedPriorityDescription: string = 'No asignado';
@@ -225,7 +225,6 @@ export class CrearOrdenComponent implements OnInit {
         next: (taskLists) => {
             if (taskLists.length > 0) {
                 const taskList = taskLists[0];
-                // Asigna el id_task_list de la tarea a selectedOt
                 this.selectedOt!.id_task_list = taskList.id_task_list;
                 this.selectedTaskListSteps = [
                     taskList.step_1,
@@ -240,10 +239,10 @@ export class CrearOrdenComponent implements OnInit {
                     taskList.step_10
                 ].filter((step) => step);
                 console.log("Pasos de la lista de tareas seleccionada:", this.selectedTaskListSteps);
-                console.log("ID de Task List asignado a selectedOt:", this.selectedOt!.id_task_list); // Log para verificar
+                console.log("ID de Task List asignado a selectedOt:", this.selectedOt!.id_task_list);
             } else {
                 this.selectedTaskListSteps = [];
-                this.selectedOt!.id_task_list = 0;  // Si no se encuentra una lista de tareas, id_task_list se establece en 0
+                this.selectedOt!.id_task_list = 0;
                 console.log("No se encontró ninguna lista de tareas para los criterios seleccionados.");
             }
         },
@@ -268,19 +267,18 @@ export class CrearOrdenComponent implements OnInit {
 
   createOt(): void {
     if (this.selectedOt) {
-      // Asegúrate de que request_date, initial_date y completion_date son del tipo `Date`
       const requestDate = typeof this.selectedOt.request_date === 'string' ? new Date(this.selectedOt.request_date) : this.selectedOt.request_date;
       const initialDate = typeof this.selectedOt.initial_date === 'string' ? new Date(this.selectedOt.initial_date) : this.selectedOt.initial_date;
       const completionDate = this.selectedOt.completion_date
         ? (typeof this.selectedOt.completion_date === 'string' ? new Date(this.selectedOt.completion_date) : this.selectedOt.completion_date)
         : null;
 
-      // Formatea las fechas
+
       this.selectedOt.request_date = this.formatDate(requestDate || new Date());
       this.selectedOt.initial_date = this.formatDate(initialDate || new Date());
       this.selectedOt.completion_date = completionDate ? this.formatDate(completionDate) : null;
 
-      // Envía la orden al servicio
+
       this.otService.create(this.selectedOt!).subscribe({
         next: (newOt) => {
           this.ordenCreada.emit(newOt);
@@ -325,7 +323,7 @@ generatePdfOnly(): void {
         id_user: 0,
         id_task_list: 0,
         id_priority: 0,
-        id_ot_state: 1,  // Asigna el estado predeterminado aquí
+        id_ot_state: 1,
         id_tag: 0,
         id_task_type: 0,
         id_asset_type: 0,

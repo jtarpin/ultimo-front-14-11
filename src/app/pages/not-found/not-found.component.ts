@@ -1,4 +1,4 @@
-// not-found.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EnviarDatosService } from '../../auth/enviar-datos.service';
@@ -16,7 +16,7 @@ export class NotFoundComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Si no está autenticado, redirigir al login; si está autenticado, mostrar el mensaje 404
+
     if (!this.enviarDatosService.isAuthenticated()) {
       this.router.navigate(['/login']);
     }

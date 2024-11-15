@@ -1,7 +1,7 @@
 export interface TaskListOt {
     id_task_list: number;
-    asset_type_name: string; // Cambiamos a asset_type_name para que coincida con los datos
-    task_type_name: string; // Cambiamos a task_type_name para que coincida con los datos
+    asset_type_name: string;
+    task_type_name: string;
     step_1: number;
     step_2: number;
     step_3: number;

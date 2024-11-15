@@ -16,7 +16,7 @@ export class AssetTypeComponent implements OnInit {
   showForm: boolean = false;
   assetTypeForm: FormGroup;
 
-  // Variables de paginación
+
   currentPage: number = 1;
   itemsPerPage: number = 10;
   totalPages: number = 1;
@@ -45,7 +45,7 @@ export class AssetTypeComponent implements OnInit {
     });
   }
 
-  // Métodos de paginación
+
   updatePagination(): void {
     this.totalPages = Math.ceil(this.assetTypes.length / this.itemsPerPage);
     this.updatePaginatedAssetTypes();

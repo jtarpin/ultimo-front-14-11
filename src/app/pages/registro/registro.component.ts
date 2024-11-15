@@ -11,7 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class RegistroComponent {
   formRegistro: FormGroup;
-  message: string = ''; // Inicializa como cadena vacía
+  message: string = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,7 +24,7 @@ export class RegistroComponent {
       last_name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
-      admin: [0, Validators.required] // Inicializa admin con 0 (Operario por defecto)
+      admin: [0, Validators.required]
     });
   }
 

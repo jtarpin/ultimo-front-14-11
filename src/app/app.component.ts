@@ -1,4 +1,4 @@
-// app.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { EnviarDatosService } from '../app/auth/enviar-datos.service';
@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Muestra el header solo si el usuario está autenticado
         this.showHeader = this.enviarDatosService.isAuthenticated();
       }
     });

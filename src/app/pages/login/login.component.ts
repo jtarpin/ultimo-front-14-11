@@ -40,15 +40,15 @@ export class LoginComponent {
       this.enviarDatosServicio.enviarFormularioLogin(this.formLogin.value).subscribe({
         next: (response) => {
           if (response.token) {
-            // Calcula la fecha de expiración para 1 hora después del momento actual
+
             const expireDate = new Date();
             expireDate.setHours(expireDate.getHours() + 1);
 
-            // Guarda el token en una cookie que expirará en 1 hora
+
             this.cookieService.set('jwt', response.token, { expires: expireDate, secure: false, sameSite: 'Lax' });
           }
 
-          // Redirige al home tras un inicio de sesión exitoso
+
           this.router.navigate(['/']);
         },
         error: (error) => {

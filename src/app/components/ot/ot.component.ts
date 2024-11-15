@@ -16,7 +16,7 @@ export class OtComponent implements OnInit {
   message: string | null = null;
   showForm: boolean = false;
 
-  // Paginación
+
   currentPage: number = 1;
   itemsPerPage: number = 10;
   totalPages: number = 1;
@@ -53,7 +53,7 @@ export class OtComponent implements OnInit {
     });
   }
 
-  // Paginación
+
   updatePagination(): void {
     this.totalPages = Math.ceil(this.ots.length / this.itemsPerPage);
     this.updatePaginatedOts();

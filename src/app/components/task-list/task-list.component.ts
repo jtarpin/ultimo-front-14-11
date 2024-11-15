@@ -57,7 +57,7 @@ export class TaskListComponent implements OnInit {
   getAllTaskLists(): void {
     this.taskListService.getAll().subscribe({
       next: (taskLists) => {
-        console.log("Task Lists received:", taskLists);  // Verificar aquí
+        console.log("Task Lists received:", taskLists);
         this.taskLists = taskLists;
         this.updatePagination();
       },

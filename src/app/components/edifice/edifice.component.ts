@@ -34,12 +34,12 @@ export class EdificeComponent implements OnInit {
     this.getAllEdifices();
   }
 
-  // Cargar todos los edificios
+
   getAllEdifices(): void {
     this.edificeService.getAll().subscribe({
       next: (data) => {
         this.edifices = data;
-        console.log('Edifices Loaded:', this.edifices); // Verificar que los edificios se cargan correctamente
+        console.log('Edifices Loaded:', this.edifices);
       },
       error: (error) => {
         this.message = `Error fetching data: ${error}`;
@@ -47,7 +47,7 @@ export class EdificeComponent implements OnInit {
     });
   }
 
-  // Obtener un edificio específico y cargar sus datos en el formulario
+
   getEdificeById(id: number): void {
     this.edificeService.getById(id).subscribe({
       next: (edifice: Edifice) => {
@@ -71,9 +71,9 @@ export class EdificeComponent implements OnInit {
   }
 
   openCreateForm(): void {
-    this.selectedEdifice = null;  // Reset selected edifice for creating a new one
-    this.edificeForm.reset();     // Reset form fields
-    this.showForm = true;         // Show the form for creating a new Edifice
+    this.selectedEdifice = null;
+    this.edificeForm.reset();
+    this.showForm = true;
   }
 
   clearForm(): void {
@@ -85,11 +85,10 @@ export class EdificeComponent implements OnInit {
   onSubmit(): void {
     if (this.edificeForm.valid) {
       if (this.selectedEdifice) {
-        // Update logic
         this.edificeService.update(this.selectedEdifice.id_edifice, this.edificeForm.value).subscribe({
           next: () => {
             this.message = 'Edifice updated successfully';
-            this.getAllEdifices();  // Reload the edifices
+            this.getAllEdifices();
             this.clearForm();
           },
           error: (err) => {
@@ -101,7 +100,7 @@ export class EdificeComponent implements OnInit {
         this.edificeService.create(this.edificeForm.value).subscribe({
           next: () => {
             this.message = 'Edifice created successfully';
-            this.getAllEdifices();  // Reload the edifices
+            this.getAllEdifices();
             this.clearForm();
           },
           error: (err) => {
@@ -116,7 +115,7 @@ export class EdificeComponent implements OnInit {
     this.edificeService.delete(id).subscribe({
       next: () => {
         this.message = 'Edifice deleted successfully';
-        this.getAllEdifices();  // Reload the list after deletion
+        this.getAllEdifices();
       },
       error: (err) => {
         this.message = 'Error deleting edifice';

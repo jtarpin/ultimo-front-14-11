@@ -30,7 +30,6 @@ export class EnviarDatosService {
   }
 
   isAuthenticated(): boolean {
-    // Verifica si el token de autenticación (jwt) está presente en las cookies
     return this.cookieService.check('jwt');
   }
 }
